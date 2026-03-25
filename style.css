@@ -296,3 +296,32 @@ h1 {
     .score-area { flex-direction: column; gap: 10px; }
     .action-buttons { flex-direction: column; }
 }
+/* 小尺寸蓝色底部 */
+footer {
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  font-size: 12px;      /* 文字变小 */
+  padding: 10px 0;      /* 高度变矮 */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+/* 鼠标悬浮轻微变色 */
+footer:hover {
+  background-color: #0056b3;
+}
+
+/* 文字动画保留（柔和不刺眼） */
+.footer-text {
+  animation: glow 3s infinite ease-in-out;
+}
+
+@keyframes glow {
+  0% { text-shadow: 0 0 3px rgba(255,255,255,0.3); }
+  50% { text-shadow: 0 0 8px rgba(255,255,255,0.5); }
+  100% { text-shadow: 0 0 3px rgba(255,255,255,0.3); }
+}
