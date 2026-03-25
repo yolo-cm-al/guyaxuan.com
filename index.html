@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>猜猜我是谁</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>猜猜我是谁？</h1>
+        
+        <div class="game-area">
+            <div class="character-display">
+                <div class="shadow-avatar"></div>
+                <div class="character-info">
+                    <div class="category">动画人物</div>
+                    <div class="hint-text">提示：点击按钮获取提示</div>
+                </div>
+            </div>
+            
+            <div class="input-area">
+                <input type="text" id="guessInput" placeholder="输入你的答案...">
+                <button onclick="checkGuess()" class="guess-btn">猜一下</button>
+            </div>
+            
+            <div class="hint-area">
+                <button onclick="getHint()" class="hint-btn">获取提示</button>
+                <div id="hintDisplay"></div>
+            </div>
+            
+            <div class="score-area">
+                <span>得分: <span id="score">0</span></span>
+                <span>剩余次数: <span id="remaining">5</span></span>
+            </div>
+            
+            <div class="action-buttons">
+                <button onclick="nextCharacter()" class="next-btn">下一个</button>
+                <button onclick="resetGame()" class="reset-btn">重新开始</button>
+            </div>
+        </div>
+        
+        <div class="result-modal" id="resultModal">
+            <div class="modal-content">
+                <h2 id="resultTitle"></h2>
+                <p id="resultMessage"></p>
+                <img id="characterImage" src="" alt="">
+                <button onclick="closeModal()">继续</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
